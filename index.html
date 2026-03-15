@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ministry of Revenue: Valid Receipt</title>
+
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #ffffff;
+      --maxw: 720px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      /* Nyala for Amharic */
+      font-family: "Nyala", "Abyssinica SIL", serif;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .receipt {
+      max-width: var(--maxw);
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Times New Roman for English and Numbers */
+    .tnr {
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    .title {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .line {
+      font-size: 21px;
+      font-weight: 700;
+      /* Minimized space between lines */
+      margin: 2px 0; 
+      line-height: 1.0;
+      white-space: pre-line;
+    }
+
+    .line.small {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    @media (max-width:420px) {
+      .title { font-size: 20px; }
+      .line { font-size: 18px; }
+  
+  </style>
+</head>
+<body>
+
+  <main class="receipt">
+    <div class="title">Ministry of Revenue: Valid Receipt</div>
+
+    <div class="line">የደረሰኝ መለያ ቁጥር: <span id="invoice-num" class="tnr">0000801</span></div>
+    
+    <div class="line">የግብር ከፋይ መለያ ቁጥር: <span class="tnr">0086182589</span></div>
+    
+    <div class="line">የደረሰኝ ዓይነት: <span class="tnr">CASH SALES INVOICE/VAT</span></div>
+
+    <div class="line">የግብር ከፋዩ ስም: <span class="tnr">BIRHANU ALEMAYEHU DIRIBA</span></div>
+
+    <div class="line">የግብሩ ከፋዩ ታክስ ማዕከል: <span class="tnr">BOLE NO.1 MEDIUM TAXPAYERS <br> BRANCH OFFICE</span></div>
+
+    <div class="line">የቫት/ VAT/ መለያ ቁጥር: <span class="tnr">22131750819</span></div>
+    <div class="line">የቫት/ VAT/ ቁጥር: <span class="tnr">17098990019</span></div>
+
+    <div class="line small">የማተሚያ ቤት ስም: <span class="tnr">BERHANENA SELAM PRINTING ENTERPRISE</span></div>
+  </main>
+
+  <script>
+    /**
+     * Finds the invoice number in the URL regardless of capitalization
+     */
+    function getInvoiceFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Loop through all parameters (e.g., ?Invoice, ?invoice, ?INVOICE)
+        for (const [key, value] of urlParams) {
+            if (key.toLowerCase() === 'invoice') {
+                return value; // Returns the number as a string to keep leading zeros
+            }
+        }
+        return null;
+    }
+
+    // Run when page loads
+    window.onload = function() {
+        const invoiceNumber = getInvoiceFromURL();
+        const display = document.getElementById('invoice-num');
+
+        if (invoiceNumber !== null) {
+            display.textContent = invoiceNumber;
+        }
+    };
+  </script>
+</body>
+</html>
