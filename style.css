@@ -51,7 +51,7 @@ h1 {
 /* Mobile Responsiveness */
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.2rem;
+        font-size: 1.24rem;
     }
     .receipt-details p {
         font-size: 1.25rem;
