@@ -1,0 +1,52 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Times New Roman", Times, serif; /* Matches the serif look in the image */
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    line-height: 1.4;
+}
+
+.receipt-container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.receipt-details p {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+}
+
+/* Specific styling for the bottom enterprise name */
+.bold-text {
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+    .receipt-details p {
+        font-size: 1rem;
+    }
+}
