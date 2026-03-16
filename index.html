@@ -1,115 +1,130 @@
 <!DOCTYPE html>
 <html lang="am">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ministry of Revenue Receipt - Font Swap</title>
-    <style>
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            height: 100vh;
-            margin: 0;
-            padding-top: 50px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ministry of Revenue Receipt - Font Swap</title>
 
-        .receipt-container {
-            text-align: center;
-            width: 95%;
-            max-width: 500px;
-            line-height: 0.8;
-        }
+<style>
 
-        /* Amharic Text specifically in Times New Roman */
-        .amharic {
-            font-family: "Power Geez Unicode", sans-serif;
-            font-weight: bold;
-          
-          }
+body{
+    background-color:#000000;
+    color:#ffffff;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    height:100vh;
+    margin:0;
+    padding-top:50px;
+}
 
-        /* English and Numbers specifically in Nyala */
-        .english-num {
-          font-family: "Times New Roman", Times, serif;
-          font-weight: bold;
-        }
+.receipt-container{
+    text-align:center;
+    width:100%;
+    max-width:800px;
+    line-height:1.6;
+}
 
-        h1 {
-            font-size: 24px;
-            margin-bottom: 22px;
-        }
+/* Amharic font */
 
-        .row {
-            font-size: 22px;
-            margin-bottom: 15px;
-            display: block;
-        }
+.amharic{
+    font-family:"Power Geez Unicode", sans-serif;
+    font-weight:bold;
+}
 
-        .sub-text {
-            display: block;
-            margin-top: 10px;
-            font-size: 21px;
-        }
-    </style>
+/* English and numbers */
+
+.english-num{
+    font-family:"Times New Roman", Times, serif;
+    font-weight:bold;
+}
+
+h1{
+    font-size:24px;
+    margin-bottom:30px;
+    line-height:1.4;
+}
+
+/* each receipt line */
+
+.row{
+    font-size:22px;
+    margin-bottom:18px;
+    line-height:1.6;
+    display:block;
+}
+
+/* second line text */
+
+.sub-text{
+    display:block;
+    margin-top:6px;
+    font-size:21px;
+    line-height:1.5;
+}
+
+</style>
 </head>
+
 <body>
 
 <div class="receipt-container">
-    <h1 class="english-num">Ministry of Revenue: Valid Recipt</h1>
 
-    <div class="row">
-        <span class="amharic">የደረሰኝ መለያ ቁጥር:</span> 
-        <span class="english-num">0000801</span>
-    </div>
-    
-    <div class="row">
-        <span class="amharic">የግብር ከፋዩ መለያ ቁጥር:</span> 
-        <span class="english-num">0086182589</span>
-    </div>
-    
-    <div class="row">
-        <span class="amharic">የደረሰኝ ዓይነት:</span> 
-        <span class="english-num">CASH SALES</span>
-        <span class="sub-text english-num">INVOICE/VAT</span>
-    </div>
+<h1 class="english-num">Ministry of Revenue: Valid Recipt</h1>
 
-    <div class="row">
-        <span class="amharic">የግብር ከፋዩ ስም:ብርሀኑ አለማየሁ ድሪባ
- </span>
-    </div>
-
-    <div class="row">
-        <span class="amharic">የግብር ከፋዩ ታክስ ማዕከል:</span> 
-        <span class="english-num">BOLE</span>
-        <span class="sub-text english-num"> BOLE NO.1 MEDIUM TAXPAYERS BRANCH OFFICE</span>
-    </div>
-
-    <div class="row">
-        <span class="amharic">የቫት/VAT/ መለያ ቁጥር:</span> 
-        <span class="english-num">22131750819</span>
-    </div>
-
-    <div class="row">
-        <span class="amharic">የቫት/VAT/ ቁጥር:</span> 
-        <span class="english-num">1709890019</span>
-    </div>
-
-    <div class="row">
-        <span class="amharic">የማተሚያ ቤት ስም:</span> 
-        <span class="english-num">BERHANENA SELAM</span>
-        <span class="sub-text english-num">PRINTING ENTERPRISE</span>
-    </div>
+<div class="row">
+<span class="amharic">የደረሰኝ መለያ ቁጥር:</span>
+<span class="english-num">0000801</span>
 </div>
+
+<div class="row">
+<span class="amharic">የግብር ከፋዩ መለያ ቁጥር:</span>
+<span class="english-num">0086182589</span>
+</div>
+
+<div class="row">
+<span class="amharic">የደረሰኝ ዓይነት:</span>
+<span class="english-num">CASH SALES</span>
+<span class="sub-text english-num">INVOICE/VAT</span>
+</div>
+
+<div class="row">
+<span class="amharic">የግብር ከፋዩ ስም:ብርሀኑ አለማየሁ ድሪባ</span>
+</div>
+
+<div class="row">
+<span class="amharic">የግብር ከፋዩ ታክስ ማዕከል:</span>
+<span class="english-num">BOLE</span>
+<span class="sub-text english-num">BOLE NO.1 MEDIUM TAXPAYERS BRANCH OFFICE</span>
+</div>
+
+<div class="row">
+<span class="amharic">የቫት/VAT/ መለያ ቁጥር:</span>
+<span class="english-num">22131750819</span>
+</div>
+
+<div class="row">
+<span class="amharic">የቫት/VAT/ ቁጥር:</span>
+<span class="english-num">1709890019</span>
+</div>
+
+<div class="row">
+<span class="amharic">የማተሚያ ቤት ስም:</span>
+<span class="english-num">BERHANENA SELAM</span>
+<span class="sub-text english-num">PRINTING ENTERPRISE</span>
+</div>
+
+</div>
+
 <script>
-    (function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        if (!urlParams.has('invoice')) {
-            const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?invoice=0000100';
-            window.history.replaceState({ path: newUrl }, '', newUrl);
-        }
-    })();
+(function(){
+const urlParams = new URLSearchParams(window.location.search);
+if(!urlParams.has('invoice')){
+const newUrl = window.location.protocol+"//"+window.location.host+window.location.pathname+'?invoice=0000100';
+window.history.replaceState({path:newUrl},'',newUrl);
+}
+})();
 </script>
 
 </body>
+</html>
