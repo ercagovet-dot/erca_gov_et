@@ -11,7 +11,7 @@
         <h1>Ministry of Revenue: Valid Receipt</h1>
         
         <div class="receipt-details">
-            <p>የደረሰኝ መለያ ቁጥር: 0001003</p>
+            <p id="invoice-id">የደረሰኝ መለያ ቁጥር: 0001003</p>
             <p>የግብር ከፋይ መለያ ቁጥር: 0044676816</p>
             <p>የደረሰኝ ዓይነት: CASH SALES INVOICE/VAT</p>
             <p>የግብር ከፋይ ስም: ሚካኤል ግዛው አረጋ</p>
@@ -21,5 +21,16 @@
             <p class="bold-text">የማተሚያ ቤት ስም: BERHANENA SELAM PRINTING ENTERPRISE</p>
         </div>
     </div>
+
+    <script>
+        // Function to get the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const invoiceNum = urlParams.get('invoicenumber');
+
+        // If a number exists in the URL, update the text
+        if (invoiceNum) {
+            document.getElementById('invoice-id').innerText = "የደረሰኝ መለያ ቁጥር: " + invoiceNum;
+        }
+    </script>
 </body>
 </html>
