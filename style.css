@@ -26,8 +26,8 @@ body {
 }
 
 h1 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
     /* Updated from 400 to bold to match your request */
     font-weight: bold; 
 }
