@@ -26,14 +26,14 @@ body {
 }
 
 h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 15px;
     /* Extra weight for the main header */
     font-weight: 400; 
 }
 
 .receipt-details p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-bottom: 4px;
     word-wrap: break-word;
     /* Ensuring all p tags are explicitly bold */
